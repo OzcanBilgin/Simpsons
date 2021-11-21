@@ -13,9 +13,7 @@ const App = () => {
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           {bootstrapped => {
-            console.log('bootstrapped', bootstrapped);
             if (bootstrapped) {
-              console.log(store.getState());
               return <RootNavigator />;
             }
             return <></>;
